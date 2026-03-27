@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Original Mecha Chaotic colors */
+  --mc-orange: #ff4500;
+  --mc-dark-bg: #0a0404;
+  --mc-dark-brown: #1a0c0c;
+  --mc-text: #ffffff;
+  --mc-text-muted: #999999;
+  
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-changa: 'Changa One', cursive;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--mc-dark-bg);
+  color: var(--mc-text);
+  font-family: var(--font-montserrat);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-changa);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--mc-dark-brown);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--mc-orange);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff6a33;
+}
+
+/* Orange glow effect */
+.orange-glow {
+  text-shadow: 0 0 20px rgba(255, 69, 0, 0.8),
+               0 0 40px rgba(255, 69, 0, 0.4);
+}
+
+.orange-border-glow {
+  box-shadow: 0 0 20px rgba(255, 69, 0, 0.6),
+              0 0 40px rgba(255, 69, 0, 0.3);
+}
+
+/* Button styles matching original */
+.mc-button {
+  display: inline-block;
+  background: var(--mc-orange);
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  font-family: var(--font-montserrat);
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+}
+
+.mc-button:hover {
+  background: #ff6a33;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(255, 69, 0, 0.5);
+}
+
+.mc-button .subtitle {
+  font-size: 10px;
+  opacity: 0.8;
+  text-transform: none;
+  letter-spacing: 0.5px;
+  margin-top: 4px;
+}
+
+/* Pattern overlay */
+.pattern-overlay {
+  position: relative;
+}
+
+.pattern-overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+/* Faction-specific colors */
+.faction-dominance {
+  border-color: #4a90e2;
+  --faction-color: #4a90e2;
+}
+
+.faction-chaos {
+  border-color: #2ecc71;
+  --faction-color: #2ecc71;
+}
+
+.faction-apex {
+  border-color: #e74c3c;
+  --faction-color: #e74c3c;
+}
+
+.faction-corrupted {
+  border-color: #e91e63;
+  --faction-color: #e91e63;
+}
+
+.faction-beast {
+  border-color: #9b59b6;
+  --faction-color: #9b59b6;
+}
+
+/* Fade in animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease forwards;
+}
