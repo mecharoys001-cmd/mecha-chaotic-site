@@ -40,6 +40,10 @@ export default function Navigation() {
             <a href="#FAQ" className="text-xs font-semibold uppercase tracking-wider hover:text-[#ff4500] transition-colors">
               FAQ
             </a>
+            <a href="https://forge.mechachaotic.com/" target="_blank" rel="noopener noreferrer" className="text-xs font-semibold uppercase tracking-wider hover:text-[#ff4500] transition-colors">
+              the Forge
+            </a>
+            
             <div className="w-px h-6 bg-[#ff4500] mx-2"></div>
             
             <a href="/raids" className="text-xs font-semibold uppercase tracking-wider hover:text-[#ff4500] transition-colors">
